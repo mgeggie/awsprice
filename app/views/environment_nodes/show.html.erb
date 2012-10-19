@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Environment:</b>
+  <%= @environment_node.environment %>
+</p>
+
+<p>
+  <b>Node type:</b>
+  <%= @environment_node.node_type %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @environment_node.quantity %>
+</p>
+
+<p>
+  <b>S3type:</b>
+  <%= @environment_node.ec2type %>
+</p>
+
+
+<%= link_to 'Edit', edit_environment_node_path(@environment_node) %> |
+<%= link_to 'Back', environment_nodes_path %>

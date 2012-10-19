@@ -1,0 +1,28 @@
+<h1>Ec2types#new</h1>
+
+<%= form_for(@ec2type) do |f| %>
+<p>
+  <%= label_tag :ec2size_id, "EC2 Size" %>
+  <%= collection_select(:ec2type, :ec2size_id, Ec2size.all, :id, :name) %>
+</p>
+<p>
+  <%= label_tag :ec2term_id, "EC2 Term" %>
+  <%= collection_select(:ec2type, :ec2term_id, Ec2term.all, :id, :name) %>
+</p>
+<p>
+  <%= label_tag :ec2util_id, "EC2 Utilization" %>
+  <%= collection_select(:ec2type, :ec2util_id, Ec2util.all, :id, :name) %>
+</p>
+<p>
+  <%= label_tag :upfront_cost, "Upfront Cost $"%>
+  <%= f.text_field :upfront_cost %>
+</p>
+<p>
+  <%= label_tag :hourly_cost, "Hourly Cost $" %>
+  <%= f.text_field :hourly_cost %>
+</p>
+<p>
+  <%= f.submit %>
+</p>
+<% end %>
+

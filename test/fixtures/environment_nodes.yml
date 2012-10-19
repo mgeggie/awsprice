@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  environment: 
+  node_type: 
+  quantity: 1
+  s3type: 
+
+two:
+  environment: 
+  node_type: 
+  quantity: 1
+  s3type: 

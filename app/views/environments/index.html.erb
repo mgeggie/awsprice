@@ -1,0 +1,41 @@
+<h1>Listing environments</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Outbound Bandwidth</th>
+    <th>Upfront $</th>
+    <th>Hourly $</th>
+    <th>Monthly $</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @environments.each do |environment| %>
+  <tr>
+    <td><%= environment.name %></td>
+    <td><%= environment.outbound_bandwidth %>GB</td>
+    <td><%= environment.upfront_cost %></td>
+    <td><%= environment.hourly_cost %></td>
+    <td><%= environment.monthly_cost %></td>
+    <td><%= link_to 'Show', environment %></td>
+    <td><%= link_to 'Edit', edit_environment_path(environment) %></td>
+    <td><%= link_to 'Destroy', environment, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+  <tr>
+    <td><b>TOTAL</b></td>
+    <td><b><%= @total_outbound_bandwidth %>GB</b></td>
+    <td><b>$<%= @total_upfront_cost %></b></td>
+    <td><b>$<%= @total_hourly_cost %></b></td>
+    <td><b>$<%= @total_monthly_cost %></b></td>
+    <td></td>
+    <td></td>
+    <td></td>      
+  </tr>
+</table>
+
+<br />
+
+<%= link_to 'New Environment', new_environment_path %>

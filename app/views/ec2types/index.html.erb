@@ -1,0 +1,14 @@
+<h1>Ec2types#index</h1>
+<p>Find me in app/views/ec2type/index.html.erb</p>
+<%= link_to "New EC2 Type", new_ec2type_path %>
+<table>
+	<tr>
+		<th>Size</th>
+		<th>Term</th>
+		<th>Util</th>
+		<th>Upfront</th>
+		<th>Hourly</th>
+		<th>Actions</th>
+	</tr>
+	<%= render @ec2types %>
+</table>

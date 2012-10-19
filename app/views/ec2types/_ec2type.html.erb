@@ -1,0 +1,10 @@
+<tr>
+	<td class="size"><%= ec2type.ec2size.name %></td>
+	<td class="term"><%= ec2type.ec2term.name %></td>
+	<td class="util"><%= ec2type.ec2util.name %></td>
+	<td class="upfront"><%= ec2type.upfront_cost %></td>
+	<td class="hourly"><%= ec2type.hourly_cost %></td>
+	<td class="actions">
+      <%= link_to "Delete", ec2type_path(ec2type.id), :method => :delete, :confirm => "Really delete?" %>
+	</td>
+</tr>

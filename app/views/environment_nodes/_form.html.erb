@@ -1,0 +1,23 @@
+<%= form_for [@environment, @environment_node] do |f| %>
+    <td>
+      <%= f.label :environment %><br />
+      <%= collection_select(:environment_node, :environment_id, Environment.all, :id, :name) %>
+    </td>
+    <td>
+      <%= f.label :node_type %><br />
+      <%= collection_select(:environment_node, :node_type_id, NodeType.all, :id, :name) %>
+    </td>
+    <td>
+      <%= f.label :quantity %><br />
+      <%= f.number_field :quantity %>
+    </td>
+    <td>
+      <%= f.label :ec2type %><br />
+      <%= collection_select(:environment_node, :ec2type_id, Ec2type.all, :id, :to_s) %>
+    </td>
+    <td>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    </td>
+<% end %>

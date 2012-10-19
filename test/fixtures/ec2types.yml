@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ec2size: 
+  ec2term: 
+  ec2util: 
+
+two:
+  ec2size: 
+  ec2term: 
+  ec2util: 

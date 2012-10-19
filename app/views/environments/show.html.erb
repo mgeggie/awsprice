@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @environment.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_environment_path(@environment) %> |
+<%= link_to 'Back', environments_path %> |
+<%= link_to 'Add Node', new_environment_environment_node_path(@environment) %>
+<table>
+<tr><th></th><th></th><th></th><th></th><th></th></tr><th>Upfront $</th><th>Hourly $</th></tr>
+<% @environment_nodes.each do |@environment_node| %>
+<tr><%= render "environment_nodes/form" %><td><%= @environment_node.upfront_cost %></td><td><%= @environment_node.hourly_cost %></tr>
+<% end %>
+<tr><td></td><td></td><td></td><td></td><td></td></tr><td><b><%= @environment.upfront_cost %></b></td><td><b><%= @environment.hourly_cost %></b></td></tr>
+</table>
